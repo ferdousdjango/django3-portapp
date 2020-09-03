@@ -17,24 +17,23 @@
 </div>
 
 
+<h2 class="mt-1">Portfolio</h2>
+<div class="row">
+  {% for port in port %}
+  <div class="col-lg-4 col-md-6">
 
+    {% if port.url %}
+    <a href="{{ port.url }}">
+      <img src="{{ port.image.url }}" class="img-fluid mb-2">
+    </a>
+    {% else %}
 
+    <img src="{{ port.image.url }}" class="img-fluid mb-2">
+    {% endif %}
+    <h3><a href="{%url 'project_list'%}">{{ port.title }}</a> </h3>
+    <p>{{ port.description }}</p>
 
-
-
-{% for port in port %}
-<h1><a href="{% url 'webapp'%}">{{port.title}}</a></h1>
-
-<br>
-<img src="{{port.image.url}}"/>
-
-<br>
-<p>{{port.description}}</p>
-<h2><a  href="{%url 'project_list'%}">{{port.projects}}</a></h2>
-<a  href="{%url 'project_list'%}">
-<h1>My projects</h1>
-</a>
-
-
-{% endfor %}
+  </div>
+  {% endfor %}
+</div>
 {% endblock  %}
