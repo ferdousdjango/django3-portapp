@@ -126,3 +126,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 LOGIN_URL = '/login/'
+
+try:
+    from .local_settings import *
+except ImportError:
+    print('no local files.looks like u r live')
