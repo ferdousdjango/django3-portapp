@@ -28,16 +28,17 @@
 <div class="row">
   {% for port in port %}
   <div class="col-lg-4 col-md-6">
-
+    
     {% if port.url %}
+    <img src="{{ port.image.url }}" class="img-fluid mb-2">
     <a href="{{ port.url }}">
-      <img src="{{ port.image.url }}" class="img-fluid mb-2">
+     <h4>{{port.port_title}}</h4>
     </a>
     {% else %}
 
     <img src="{{ port.image.url }}" class="img-fluid mb-2">
     {% endif %}
-    <h3><a href="{%url 'project_list'%}">{{ port.title }}</a> </h3>
+    <h4>{{port.title}}</h4>
     <p>{{ port.description }}</p>
 
   </div>
