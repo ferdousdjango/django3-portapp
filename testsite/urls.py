@@ -23,6 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     #mainlanding page
     path('', views.home,name='home'),
+    path('contact/', views.contact,name='contact'),
     path('projects/', views.project_list,name='project_list'),
     #webapp
     path('webapp/', include('webapp.urls')),
