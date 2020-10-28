@@ -19,13 +19,13 @@
         <div class="col-md-7 text-center">
 
                  <h1>Hey there how is it going!</h1>
-            <p>Life is fun. But life is also busy. There's a million different things you could be doing. But what matters is <u>what</u> you do. So here i am a fullstack developer and software engineer created <b><i>Todo Woo</i></b> and <b><i>Password Generator</i></b> to help you make sense of all of your opportunities and live that life that matters most to you. Your new organized life awaits.</p>
-        <a role="button" class="btn btn-primary btn-lg" href="{% url 'project_list' %}">Checkout my apps </a>
+            <p>In this troubled time the demand of online services are increasing everyday.and here i am <u>  So here i am a fullstack developer and software engineer </u><b><i>To help you grow your business in this troubled time</i></b> and  to help you make sense of all of your opportunities. Your new organized life awaits.So checkout my websites and let me help u to have a wonderful organized website with your desired design and functionality.</p>
+        
          <a role="button" class="btn btn-primary btn-lg" href="{% url 'contact' %}">Contact me </a>
         </div>
     </div>
+<h3><span class="badge badge-secondary">Websites(check the link below)</span></h3>
 
-<h2 class="mt-1">Websites</h2>
 <div class="row">
   {% for port in port %}
   <div class="col-lg-4 col-md-6">
@@ -33,8 +33,9 @@
     {% if port.url %}
     <img src="{{ port.image.url }}" class="img-fluid mb-2">
     <a href="{{ port.url }}">
-     <h4>{{port.port_title}}</h4>
+     <h4><span class="badge badge-danger">{{port.port_title}}</span></h4>
     </a>
+    
     {% else %}
 
     <img src="{{ port.image.url }}" class="img-fluid mb-2">
